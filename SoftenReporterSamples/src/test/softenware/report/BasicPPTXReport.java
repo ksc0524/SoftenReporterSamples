@@ -1,11 +1,6 @@
 package test.softenware.report;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import com.softenware.report.SoftenPPTXReporter;
@@ -13,64 +8,12 @@ import com.softenware.report.SoftenPPTXReporter;
 public class BasicPPTXReport {
 
 	public static void main(String[] args) throws Exception {
-		File templateFile = new File("samples" + File.separator + "Template-Sample-A.pptx");
-		Map<String, Object> data = getData();
+		File templateFile = new File("samples" + File.separator + "template" + File.separator + "Template-Sample-A.pptx");
+		Map<String, Object> data = SampleDataUtils.getSampleData();
 		
 		SoftenPPTXReporter reporter = new SoftenPPTXReporter(templateFile, data);
-		reporter.report(new File("samples" + File.separator + "Report-Result-A.pptx"));
+		reporter.report(new File("samples" + File.separator + "result" + File.separator + "Report-Result-fromBasicSample.pptx"));
 		
 		System.out.println("Report file created.");
-	}
-	
-	private static Map<String, Object> getData() {
-		HashMap<String, Object> map = new HashMap<>();
-		
-		List<Object> list = new ArrayList<>();
-		
-		for (int i = 0 ; i < 100 ; i++)
-			list.add(makeTargetPart("1234-5678-" + i, "TEST CAD NAME - " + i, "Softenware", ""));
-		
-		map.put("TargetParts", list);
-		map.put("BasicInfo", makeBasicInfo("Softenware test", "R&D", "ksc0524", "" + list.size()));
-		
-		return map;
-	}
-	
-	private static Map<String, Object> makeTargetPart(String partNumber, String cadName, String companyName, String note) {
-		HashMap<String, Object> vo = new HashMap<>();
-		
-		vo.put("partNumber", partNumber);
-		vo.put("cadName", cadName);
-		vo.put("companyName", companyName);
-		vo.put("note", note);
-
-		Date now = Calendar.getInstance().getTime();
-		vo.put("startDate", now);
-		vo.put("endDate", now);
-		vo.put("compDate", now);
-		vo.put("planDate", now);
-		
-		return vo;
-	}
-	
-	private static Map<String, Object> makeBasicInfo(String partType, String deptName, String reporterName, String targetPartCount) {
-		HashMap<String, Object> vo = new HashMap<>();
-		
-		vo.put("partType", partType);
-		vo.put("deptName", deptName);
-		vo.put("reporterName", reporterName);
-		vo.put("targetPartCount", targetPartCount);
-		
-		Date now = Calendar.getInstance().getTime();
-		vo.put("targetDate", now);
-		vo.put("allDesignDate", now);
-		vo.put("protoDate", now);
-		vo.put("esirDate", now);
-		vo.put("mcarDate", now);
-		vo.put("p1Date", now);
-		vo.put("p2Date", now);
-		vo.put("prodDate", now);
-		
-		return vo;
 	}
 }

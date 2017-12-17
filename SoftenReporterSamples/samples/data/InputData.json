@@ -1,0 +1,111 @@
+{
+	"TargetParts": [
+		{
+			"partNumber": "1234-5678-0",
+			"cadName": "TEST CAD NAME 0",
+			"companyName": "Softenware",
+			"note": "",
+			"startDate": "2017-12-19",
+			"endDate": "2017-12-19",
+			"compDate": "2017-12-19",
+			"planDate": "2017-12-19"
+		}, {
+			"partNumber": "1234-5678-1",
+			"cadName": "TEST CAD NAME 1",
+			"companyName": "Softenware",
+			"note": "",
+			"startDate": "2017-12-19",
+			"endDate": "2017-12-19",
+			"compDate": "2017-12-19",
+			"planDate": "2017-12-19"
+		}, {
+			"partNumber": "1234-5678-2",
+			"cadName": "TEST CAD NAME 2",
+			"companyName": "Softenware",
+			"note": "",
+			"startDate": "2017-12-19",
+			"endDate": "2017-12-19",
+			"compDate": "2017-12-19",
+			"planDate": "2017-12-19"
+		}, {
+			"partNumber": "1234-5678-3",
+			"cadName": "TEST CAD NAME 3",
+			"companyName": "Softenware",
+			"note": "",
+			"startDate": "2017-12-19",
+			"endDate": "2017-12-19",
+			"compDate": "2017-12-19",
+			"planDate": "2017-12-19"
+		}, {
+			"partNumber": "1234-5678-4",
+			"cadName": "TEST CAD NAME 4",
+			"companyName": "Softenware",
+			"note": "",
+			"startDate": "2017-12-19",
+			"endDate": "2017-12-19",
+			"compDate": "2017-12-19",
+			"planDate": "2017-12-19"
+		}, {
+			"partNumber": "1234-5678-5",
+			"cadName": "TEST CAD NAME 5",
+			"companyName": "Softenware",
+			"note": "",
+			"startDate": "2017-12-19",
+			"endDate": "2017-12-19",
+			"compDate": "2017-12-19",
+			"planDate": "2017-12-19"
+		}, {
+			"partNumber": "1234-5678-6",
+			"cadName": "TEST CAD NAME 6",
+			"companyName": "Softenware",
+			"note": "",
+			"startDate": "2017-12-19",
+			"endDate": "2017-12-19",
+			"compDate": "2017-12-19",
+			"planDate": "2017-12-19"
+		}, {
+			"partNumber": "1234-5678-7",
+			"cadName": "TEST CAD NAME 7",
+			"companyName": "Softenware",
+			"note": "",
+			"startDate": "2017-12-19",
+			"endDate": "2017-12-19",
+			"compDate": "2017-12-19",
+			"planDate": "2017-12-19"
+		}, {
+			"partNumber": "1234-5678-8",
+			"cadName": "TEST CAD NAME 8",
+			"companyName": "Softenware",
+			"note": "",
+			"startDate": "2017-12-19",
+			"endDate": "2017-12-19",
+			"compDate": "2017-12-19",
+			"planDate": "2017-12-19"
+		}, {
+			"partNumber": "1234-5678-9",
+			"cadName": "TEST CAD NAME 9",
+			"companyName": "Softenware",
+			"note": "",
+			"startDate": "2017-12-19",
+			"endDate": "2017-12-19",
+			"compDate": "2017-12-19",
+			"planDate": "2017-12-19"
+		}
+	],
+	
+	"BasicInfo": {
+		"partType": "Softenware Test",
+		"deptName": "R&D",
+		"reporterName": "ksc0524",
+		"targetPartCount": 100,
+		
+		"targetDate": "2017-12-19",
+		"allDesignDate": "2017-12-19",
+		"protoDate": "2017-12-19",
+		"esirDate": "2017-12-19",
+		"mcarDate": "2017-12-19",
+		"p1Date": "2017-12-19",
+		"p2Date": "2017-12-19",
+		"prodDate": "2017-12-19"
+	}
+}
