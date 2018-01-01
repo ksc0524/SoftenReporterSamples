@@ -1,9 +1,12 @@
 package test.softenware.report;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.lang.ProcessBuilder.Redirect;
 import java.util.Map;
+
+import com.softenware.report.client.SoftenReporterProcessExecutor;
 
 public class UsingProcessPPTXReport {
 
@@ -14,6 +17,18 @@ public class UsingProcessPPTXReport {
 	 * @throws Exception
 	 */
 	public static void main(String[] args) throws Exception {
+		usingProcessExecutor();
+		usingProcessBuilder();
+	}
+	
+	private static void usingProcessExecutor() throws IOException, InterruptedException {
+		SoftenReporterProcessExecutor executor = new SoftenReporterProcessExecutor("samples", "java.exe", null);
+		executor.report("template/Template-Sample-A.pptx", SampleDataUtils.getSampleData(), "result/Report-Result-fromProcessExecutor.pptx");
+		
+		System.out.println("Report-1 created.");
+	}
+	
+	private static void usingProcessBuilder() throws IOException, InterruptedException {
 		Map<String, Object> data = SampleDataUtils.getSampleData();
 		
 		ProcessBuilder pb = new ProcessBuilder(
@@ -21,7 +36,6 @@ public class UsingProcessPPTXReport {
 				"-cp",
 				".;lib/*",
 				"com.softenware.report.SoftenReporterProcess",
-				"pptx",
 				"-template", "template/Template-Sample-A.pptx",
 //				"-in", "data/InputData.kson",
 //				"-data", "kson",
@@ -30,7 +44,6 @@ public class UsingProcessPPTXReport {
 		
 		pb.directory(new File("samples"));
 		pb.redirectError(Redirect.INHERIT);
-//		pb.redirectOutput(new File("D:\\temp\\test\\ReportResult-Sample-A.pptx"));
 		
 		ObjectOutputStream procInput = null;
 		try {
@@ -47,6 +60,6 @@ public class UsingProcessPPTXReport {
 				procInput.close();
 		}
 		
-		System.out.println("Report created.");
+		System.out.println("Report-2 created.");
 	}
 }
