@@ -9,15 +9,15 @@ public class UsingSoftenReporterServer {
 
 	public static void main(String[] args) throws Exception {
 		// Initialize SoftenReporterClient: set server host and port
-		SoftenReporterClient client = new SoftenReporterClient("localhost", 8080);
+		SoftenReporterClient client = new SoftenReporterClient("localhost", 7048);
 		
 		// 1. How to request server to make pptx file directly
-		boolean result = client.report("D:\\temp\\test\\ReportTemplate-Sample-A.pptx", SampleDataUtils.getSampleData(), "D:\\temp\\test\\ReportResult-From-Server.pptx");
+		boolean result = client.report("template/Template-Sample-A.pptx", SampleDataUtils.getSampleData(), "result\\ReportResult-from-Server.pptx");
 		
 		if (result)
-			System.out.println("Succeed to report");
+			System.out.println("Succeeded in reporting");
 		else
-			System.out.println("Fail to report");
+			System.out.println("Failed to report");
 		
 		
 		// 2. How to request server to return pptx stream (You can use this method for web response, etc.
@@ -25,10 +25,10 @@ public class UsingSoftenReporterServer {
 		InputStream in = null;
 		
 		try {
-			in = client.report("D:\\temp\\test\\ReportTemplate-Sample-A.pptx", SampleDataUtils.getSampleData());
+			in = client.report("template/Template-Sample-A.pptx", SampleDataUtils.getSampleData());
 			
 			// For test, write stream to a file
-			out = new FileOutputStream("D:\\temp\\test\\ReportResult-From-ServerStream.pptx");
+			out = new FileOutputStream("samples\\result\\ReportResult-from-ServerStream.pptx");
 			
 			byte[] buff = new byte[1024];
 			int read;
@@ -41,5 +41,7 @@ public class UsingSoftenReporterServer {
 			if (out != null)
 				out.close();
 		}
+		
+		System.out.println("Succeeded in reporting");
 	}
 }
