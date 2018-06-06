@@ -7,6 +7,6 @@
 	<classpathentry kind="lib" path="samples/lib/poi-ooxml-schemas-3.16.jar"/>
 	<classpathentry kind="lib" path="samples/lib/xmlbeans-2.6.0.jar"/>
 	<classpathentry kind="lib" path="samples/lib/commons-collections4-4.1.jar"/>
-	<classpathentry kind="lib" path="samples/lib/soften-reporter-0.9.2.jar"/>
+	<classpathentry kind="lib" path="samples/lib/soften-reporter-0.9.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
